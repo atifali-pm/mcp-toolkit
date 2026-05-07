@@ -44,12 +44,12 @@ Stop after Phase 0 boots cleanly. We add Phase 1 in the next session.
 
 ## Phase plan
 
-- [ ] Phase 0: Monorepo scaffold
-  - [ ] pnpm-workspace.yaml at repo root
-  - [ ] packages/core, packages/github, packages/linear, packages/gmail
-  - [ ] Root tsconfig with project references, strict mode on
-  - [ ] Lint config (eslint or biome) wired up
-  - [ ] First commit per package builds with `pnpm -r build`
+- [x] Phase 0: Monorepo scaffold
+  - [x] pnpm-workspace.yaml at repo root
+  - [x] packages/core, packages/github, packages/linear, packages/gmail
+  - [x] Root tsconfig with project references, strict mode on
+  - [x] Lint config (biome) wired up
+  - [x] `pnpm -r build` succeeds across all 4 packages
 - [ ] Phase 1: GitHub MCP server
   - [ ] Tool list: issue.list, issue.create, issue.update, pr.review, repo.search
   - [ ] PAT auth via env (`GITHUB_TOKEN`)

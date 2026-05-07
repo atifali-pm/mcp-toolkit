@@ -1,0 +1,32 @@
+{
+  "name": "mcp-toolkit",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Production-grade MCP servers for Claude Desktop and Cursor: GitHub, Linear, Gmail.",
+  "license": "MIT",
+  "author": "Atif Ali",
+  "homepage": "https://github.com/atifali-pm/mcp-toolkit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atifali-pm/mcp-toolkit.git"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=10"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "clean": "pnpm -r exec rm -rf dist *.tsbuildinfo",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "typecheck": "tsc -b --pretty"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "typescript": "5.7.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["@biomejs/biome", "better-sqlite3"]
+  }
+}

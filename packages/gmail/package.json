@@ -1,0 +1,24 @@
+{
+  "name": "@mcp-toolkit/gmail",
+  "version": "0.0.1",
+  "private": true,
+  "description": "MCP server for Gmail. Read, send, label messages with OAuth2 token refresh and audit logging.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "atif-mcp-gmail": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@mcp-toolkit/core": "workspace:*",
+    "@modelcontextprotocol/sdk": "1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.5"
+  }
+}
