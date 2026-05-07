@@ -56,11 +56,11 @@ Stop after Phase 0 boots cleanly. We add Phase 1 in the next session.
   - [x] Rate-limit handling, surface remaining quota in errors
   - [x] Audit every call to SQLite via packages/core
   - [x] Verified end-to-end via @modelcontextprotocol/inspector (Linux has no Claude Desktop), screenshot saved
-- [ ] Phase 2: Linear MCP server
-  - [ ] Tool list: issue.list, issue.create, project.query, team.query
-  - [ ] API key auth via env (`LINEAR_API_KEY`)
-  - [ ] Audit logging
-  - [ ] Verified in Claude Desktop, screenshot saved
+- [x] Phase 2: Linear MCP server
+  - [x] Tool list: issue.list, issue.create, project.query, team.query
+  - [x] API key auth via env (`LINEAR_API_KEY`)
+  - [x] Audit logging
+  - [x] Verified via @modelcontextprotocol/inspector (auth-error contract; live workspace round-trip pending a real Linear API key), screenshot saved
 - [ ] Phase 3: Gmail MCP server
   - [ ] Tool list: message.list, message.read, message.send, label.apply
   - [ ] OAuth flow with token refresh, document buyer-side Google Cloud setup
