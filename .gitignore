@@ -1,0 +1,33 @@
+# Node / TypeScript
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+.turbo/
+.next/
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+*.pem
+
+# Audit + local data
+*.sqlite
+*.sqlite-journal
+*.db
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Keep the dir, ignore stray junk inside
+screenshots/.keep
