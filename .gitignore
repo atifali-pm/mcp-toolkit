@@ -27,6 +27,7 @@ yarn-debug.log*
 .DS_Store
 .idea/
 .vscode/
+.claude/
 *.swp
 
 # Keep the dir, ignore stray junk inside

@@ -50,12 +50,12 @@ Stop after Phase 0 boots cleanly. We add Phase 1 in the next session.
   - [x] Root tsconfig with project references, strict mode on
   - [x] Lint config (biome) wired up
   - [x] `pnpm -r build` succeeds across all 4 packages
-- [ ] Phase 1: GitHub MCP server
-  - [ ] Tool list: issue.list, issue.create, issue.update, pr.review, repo.search
-  - [ ] PAT auth via env (`GITHUB_TOKEN`)
-  - [ ] Rate-limit handling, surface remaining quota in errors
-  - [ ] Audit every call to SQLite via packages/core
-  - [ ] Verified end-to-end in Claude Desktop, screenshot saved
+- [x] Phase 1: GitHub MCP server
+  - [x] Tool list: issue.list, issue.create, issue.update, pr.review, repo.search
+  - [x] PAT auth via env (`GITHUB_TOKEN`)
+  - [x] Rate-limit handling, surface remaining quota in errors
+  - [x] Audit every call to SQLite via packages/core
+  - [x] Verified end-to-end via @modelcontextprotocol/inspector (Linux has no Claude Desktop), screenshot saved
 - [ ] Phase 2: Linear MCP server
   - [ ] Tool list: issue.list, issue.create, project.query, team.query
   - [ ] API key auth via env (`LINEAR_API_KEY`)

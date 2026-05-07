@@ -35,11 +35,11 @@ It also serves as the proof artifact behind the Custom MCP Server gig on Fiverr 
 - Phase 5: README polish, demo recordings
 - Phase 6: Optional one-shot CLI installer
 
-Status: scaffolded.
+Status: Phase 1 shipped.
 
 ## Screenshots
 
-![GitHub MCP in Claude Desktop](screenshots/01-github-mcp-claude.png)
+![GitHub MCP server inspected via @modelcontextprotocol/inspector — repo.search round-trip with rate-limit info and audit log](screenshots/01-github-mcp-inspector.png)
 ![Linear MCP issue creation](screenshots/02-linear-mcp-issue.png)
 ![Gmail MCP search](screenshots/03-gmail-mcp-search.png)
 ![Audit log replay](screenshots/04-audit-log.png)
