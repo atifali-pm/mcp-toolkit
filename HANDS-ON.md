@@ -66,10 +66,11 @@ Stop after Phase 0 boots cleanly. We add Phase 1 in the next session.
   - [ ] OAuth flow with token refresh, document buyer-side Google Cloud setup
   - [ ] Audit logging
   - [ ] Verified in Claude Desktop, screenshot saved
-- [ ] Phase 4: Audit module hardening
-  - [ ] SQLite default schema (id, server, tool, args_json, response_json, ts)
-  - [ ] Postgres adapter behind same interface, switched via env
-  - [ ] Replay command: print last N calls per server
+- [x] Phase 4: Audit module hardening
+  - [x] SQLite default schema (id, server, tool, args_json, response_json, ts)
+  - [x] Postgres adapter behind same interface, switched via env (`MCP_TOOLKIT_AUDIT_DRIVER=postgres`, `MCP_TOOLKIT_AUDIT_URL=...`)
+  - [x] Replay command: `npx atif-mcp-replay --server <name> --tool <name> --limit <n>`
+  - [x] Bonus: hoisted server boilerplate into `runMcpServer()` helper in `@mcp-toolkit/core`. Server bin entries are now ~10 lines each.
 - [ ] Phase 5: README polish + demo recordings
   - [ ] Each server gets a 30-second screen recording embedded as a screenshot strip
   - [ ] Buyer-facing setup steps for each server

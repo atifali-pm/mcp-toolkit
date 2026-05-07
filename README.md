@@ -35,9 +35,10 @@ It also serves as the proof artifact behind the Custom MCP Server gig on Fiverr 
 - Phase 5: README polish, demo recordings
 - Phase 6: Optional one-shot CLI installer
 
-Status: Phases 1 and 2 shipped.
+Status: Phases 1, 2, and 4 shipped. Phase 3 (Gmail) and Phase 5/6 still to come.
 
 ## Screenshots
 
 ![GitHub MCP server inspected via @modelcontextprotocol/inspector, repo.search round-trip with rate-limit info and audit log](screenshots/01-github-mcp-inspector.png)
 ![Linear MCP server inspected via @modelcontextprotocol/inspector, team.query round-trip showing the auth-error contract](screenshots/02-linear-mcp-inspector.png)
+![atif-mcp-replay CLI printing the most recent tool calls from the SQLite audit log, success and error rows colored differently](screenshots/04-audit-log.png)

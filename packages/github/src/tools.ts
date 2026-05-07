@@ -1,21 +1,7 @@
-import type { GitHubClient, RateLimit } from "./github-client.js";
+import type { ToolDefinition as CoreToolDefinition } from "@mcp-toolkit/core";
+import type { GitHubClient } from "./github-client.js";
 
-export interface ToolDefinition {
-  name: string;
-  description: string;
-  inputSchema: {
-    type: "object";
-    properties: Record<string, unknown>;
-    required?: string[];
-    additionalProperties: boolean;
-  };
-  handler: (client: GitHubClient, args: Record<string, unknown>) => Promise<ToolResult>;
-}
-
-export interface ToolResult {
-  data: unknown;
-  rateLimit: RateLimit;
-}
+type ToolDefinition = CoreToolDefinition<GitHubClient>;
 
 interface IssueSummary {
   number: number;
