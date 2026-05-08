@@ -61,22 +61,46 @@ Stop after Phase 0 boots cleanly. We add Phase 1 in the next session.
   - [x] API key auth via env (`LINEAR_API_KEY`)
   - [x] Audit logging
   - [x] Verified via @modelcontextprotocol/inspector (auth-error contract; live workspace round-trip pending a real Linear API key), screenshot saved
-- [ ] Phase 3: Gmail MCP server
+- [ ] Phase 3: Gmail MCP server (deferred indefinitely)
   - [ ] Tool list: message.list, message.read, message.send, label.apply
   - [ ] OAuth flow with token refresh, document buyer-side Google Cloud setup
   - [ ] Audit logging
-  - [ ] Verified in Claude Desktop, screenshot saved
+  - [ ] Verified via @modelcontextprotocol/inspector, screenshot saved
 - [x] Phase 4: Audit module hardening
   - [x] SQLite default schema (id, server, tool, args_json, response_json, ts)
   - [x] Postgres adapter behind same interface, switched via env (`MCP_TOOLKIT_AUDIT_DRIVER=postgres`, `MCP_TOOLKIT_AUDIT_URL=...`)
   - [x] Replay command: `npx atif-mcp-replay --server <name> --tool <name> --limit <n>`
-  - [x] Bonus: hoisted server boilerplate into `runMcpServer()` helper in `@mcp-toolkit/core`. Server bin entries are now ~10 lines each.
-- [ ] Phase 5: README polish + demo recordings
-  - [ ] Each server gets a 30-second screen recording embedded as a screenshot strip
-  - [ ] Buyer-facing setup steps for each server
-- [ ] Phase 6: Optional CLI installer
-  - [ ] `npx atif-mcp-github` writes the right block into claude_desktop_config.json
-  - [ ] Per-package npm publish under `atif-` scope
+  - [x] Bonus: hoisted server boilerplate into `runMcpServer()` helper in `atif-mcp-core`. Server bin entries are now ~10 lines each.
+- [x] Phase 5: README polish + per-server docs
+  - [x] Hero strip composite at `screenshots/00-hero.png` covering both servers + audit log (recordings substituted with the static strip)
+  - [x] Per-package README for each published package (`packages/{core,github,linear}/README.md`) with `--init` quick start
+- [x] Phase 6: Distribution prep
+  - [x] `--init`, `--help`, `--version` flags via `handleCli()` in core; servers print a paste-ready Claude Desktop / Cursor config block
+  - [x] Packages renamed from `@mcp-toolkit/*` to `atif-mcp-*` to match the bin names
+  - [x] `publishConfig.access`, `files`, `repository`, `homepage`, `keywords` set on each public package
+  - [ ] Actual `npm publish` (run by user when ready, see steps below)
+
+### Publishing to npm (when ready)
+
+```sh
+# 1. Log in once with your npm account
+npm login
+
+# 2. From each package dir, in this order (core first because servers depend on it):
+cd packages/core    && pnpm publish --access public --no-git-checks
+cd ../github        && pnpm publish --access public --no-git-checks
+cd ../linear        && pnpm publish --access public --no-git-checks
+
+# 3. Verify
+npm info atif-mcp-core
+npm info atif-mcp-github
+npm info atif-mcp-linear
+
+# 4. Test from a clean machine
+GITHUB_TOKEN=ghp_xxx npx -y atif-mcp-github --init
+```
+
+`pnpm publish` automatically rewrites `workspace:^0.1.0` to a real version range before uploading. Don't pass `--no-git-checks` if you want pnpm to refuse a publish from a dirty tree.
 
 ## Known gotchas
 

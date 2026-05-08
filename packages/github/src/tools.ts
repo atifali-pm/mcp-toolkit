@@ -1,4 +1,4 @@
-import type { ToolDefinition as CoreToolDefinition } from "@mcp-toolkit/core";
+import type { ToolDefinition as CoreToolDefinition } from "atif-mcp-core";
 import type { GitHubClient } from "./github-client.js";
 
 type ToolDefinition = CoreToolDefinition<GitHubClient>;

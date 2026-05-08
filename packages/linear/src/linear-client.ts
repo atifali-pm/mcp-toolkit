@@ -1,4 +1,4 @@
-import { AuthError, McpToolError, NotFoundError, RateLimitError } from "@mcp-toolkit/core";
+import { AuthError, McpToolError, NotFoundError, RateLimitError } from "atif-mcp-core";
 
 const LINEAR_API = "https://api.linear.app/graphql";
 

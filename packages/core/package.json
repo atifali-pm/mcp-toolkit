@@ -1,12 +1,22 @@
 {
-  "name": "@mcp-toolkit/core",
-  "version": "0.0.1",
-  "private": true,
+  "name": "atif-mcp-core",
+  "version": "0.1.0",
   "description": "Shared building blocks for the MCP Toolkit servers: auth, audit (SQLite + Postgres), logger, runMcpServer helper, replay CLI.",
+  "keywords": ["mcp", "model-context-protocol", "claude", "cursor", "audit"],
   "license": "MIT",
+  "homepage": "https://github.com/atifali-pm/mcp-toolkit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atifali-pm/mcp-toolkit.git",
+    "directory": "packages/core"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": ["dist", "README.md"],
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "import": "./dist/index.js",

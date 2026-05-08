@@ -39,12 +39,12 @@ importers:
 
   packages/github:
     dependencies:
-      '@mcp-toolkit/core':
-        specifier: workspace:*
-        version: link:../core
       '@modelcontextprotocol/sdk':
         specifier: 1.0.4
         version: 1.0.4
+      atif-mcp-core:
+        specifier: workspace:^0.1.0
+        version: link:../core
     devDependencies:
       '@types/node':
         specifier: 22.10.5
@@ -52,12 +52,12 @@ importers:
 
   packages/gmail:
     dependencies:
-      '@mcp-toolkit/core':
-        specifier: workspace:*
-        version: link:../core
       '@modelcontextprotocol/sdk':
         specifier: 1.0.4
         version: 1.0.4
+      atif-mcp-core:
+        specifier: workspace:*
+        version: link:../core
     devDependencies:
       '@types/node':
         specifier: 22.10.5
@@ -65,12 +65,12 @@ importers:
 
   packages/linear:
     dependencies:
-      '@mcp-toolkit/core':
-        specifier: workspace:*
-        version: link:../core
       '@modelcontextprotocol/sdk':
         specifier: 1.0.4
         version: 1.0.4
+      atif-mcp-core:
+        specifier: workspace:^0.1.0
+        version: link:../core
     devDependencies:
       '@types/node':
         specifier: 22.10.5

@@ -1,4 +1,4 @@
-import { AuthError, NotFoundError, RateLimitError, McpToolError } from "@mcp-toolkit/core";
+import { AuthError, NotFoundError, RateLimitError, McpToolError } from "atif-mcp-core";
 
 const GITHUB_API = "https://api.github.com";
 

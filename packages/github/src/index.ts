@@ -1,7 +1,25 @@
 #!/usr/bin/env node
-import { requireEnv, runMcpServer } from "@mcp-toolkit/core";
+import { handleCli, requireEnv, runMcpServer } from "atif-mcp-core";
 import { GitHubClient } from "./github-client.js";
 import { TOOLS } from "./tools.js";
+
+const VERSION = "0.1.0";
+
+if (
+  handleCli({
+    serverName: "github",
+    binName: "atif-mcp-github",
+    version: VERSION,
+    env: [
+      {
+        name: "GITHUB_TOKEN",
+        description: "GitHub personal access token with repo + read:org scopes",
+      },
+    ],
+  })
+) {
+  process.exit(0);
+}
 
 const token = requireEnv(
   "GITHUB_TOKEN",
@@ -10,7 +28,7 @@ const token = requireEnv(
 
 await runMcpServer({
   name: "github",
-  version: "0.0.1",
+  version: VERSION,
   tools: TOOLS,
   client: new GitHubClient({ token }),
 });

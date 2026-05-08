@@ -16,3 +16,4 @@ export {
   type ToolResult,
 } from "./tools.js";
 export { type RunMcpServerOptions, runMcpServer } from "./run-server.js";
+export { type CliEnvVar, type CliOptions, handleCli } from "./cli.js";

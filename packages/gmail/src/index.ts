@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { createLogger } from "@mcp-toolkit/core";
+import { createLogger } from "atif-mcp-core";
 
 const logger = createLogger({ server: "gmail" });
 

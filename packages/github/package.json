@@ -1,12 +1,22 @@
 {
-  "name": "@mcp-toolkit/github",
-  "version": "0.0.1",
-  "private": true,
+  "name": "atif-mcp-github",
+  "version": "0.1.0",
   "description": "MCP server for GitHub. Issue CRUD, PR review, repo search, with audit and rate-limit handling.",
+  "keywords": ["mcp", "model-context-protocol", "github", "claude", "cursor"],
   "license": "MIT",
+  "homepage": "https://github.com/atifali-pm/mcp-toolkit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atifali-pm/mcp-toolkit.git",
+    "directory": "packages/github"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": ["dist", "README.md"],
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "atif-mcp-github": "./dist/index.js"
   },
@@ -15,7 +25,7 @@
     "start": "node dist/index.js"
   },
   "dependencies": {
-    "@mcp-toolkit/core": "workspace:*",
+    "atif-mcp-core": "workspace:^0.1.0",
     "@modelcontextprotocol/sdk": "1.0.4"
   },
   "devDependencies": {
