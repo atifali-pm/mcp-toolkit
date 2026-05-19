@@ -1,12 +1,22 @@
 {
   "name": "atif-mcp-gmail",
-  "version": "0.0.1",
-  "private": true,
-  "description": "MCP server for Gmail. Read, send, label messages with OAuth2 token refresh and audit logging.",
+  "version": "0.1.0",
+  "description": "MCP server for Gmail. message.list, message.read, message.send, label.apply with OAuth2 refresh and audit logging.",
+  "keywords": ["mcp", "model-context-protocol", "gmail", "google", "claude", "cursor"],
   "license": "MIT",
+  "homepage": "https://github.com/atifali-pm/mcp-toolkit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atifali-pm/mcp-toolkit.git",
+    "directory": "packages/gmail"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "files": ["dist", "README.md"],
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "atif-mcp-gmail": "./dist/index.js"
   },
@@ -15,8 +25,9 @@
     "start": "node dist/index.js"
   },
   "dependencies": {
-    "atif-mcp-core": "workspace:*",
-    "@modelcontextprotocol/sdk": "1.0.4"
+    "@modelcontextprotocol/sdk": "1.0.4",
+    "atif-mcp-core": "workspace:^0.1.0",
+    "google-auth-library": "9.15.0"
   },
   "devDependencies": {
     "@types/node": "22.10.5"
